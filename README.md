@@ -9,3 +9,9 @@ The index.html file is responsible for the layout and structure of the web inter
 The style.css file is responsible for customizing the visual appearance of the page's components. It also handles the loading animation using CSS keyframes. Keyframes are a way of defining the values of an animation at various points in time, allowing for a smooth transition between different styles and creating dynamic animations.
 
 The script.js file is responsible for the page's interactivity and functionality. It contains the majority of the code and handles all the necessary functions such as switching between light and dark mode, sending messages, and displaying new messages on the screen. It even enables the users to record audio.
+
+mkdir /home/project/chatapp-with-voice-and-openai/certs/
+cp /usr/local/share/ca-certificates/rootCA.crt /home/project/chatapp-with-voice-and-openai/certs/
+
+docker build . -t voice-chatapp-powered-by-openai
+docker run -p 8000:8000 voice-chatapp-powered-by-openai
